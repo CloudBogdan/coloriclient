@@ -1,0 +1,230 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+
+    background: #fff;
+    color: #252525;
+
+    --minishadow: 0 0 20px rgba(0, 0, 0, .1);
+    --shadow: 0 0 30px rgba(0, 0, 0, .2);
+    --defcolor: #4D9FFF;
+    --deftextcolor: #505050;
+    --grey: #D9D9D9;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Effects */
+/* > Pulse */
+.pulse {
+    overflow: hidden;
+}
+.pulse.light .inpulse {
+    background: #fff;
+}
+.pulse.light:hover .inpulse {
+    opacity: .3;
+}
+.pulse .inpulse {
+    width: 0;
+    height: 0;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+    background: #000;
+    opacity: 0;
+
+    transition: .3s;
+}
+.pulse:hover .inpulse {
+    opacity: .1;
+}
+.pulse:active .inpulse {
+    opacity: .05;
+}
+
+/* > Context menu */
+.contextmenu_box {
+    left: 10px;
+    transform: scaleX(0);
+    transition-delay: .2s;
+}
+.contextmenu {
+    padding: 10px;
+    font-size: 20px;
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(10px, -50%);
+    white-space: nowrap;
+
+    background: #fff;
+    color: var(--deftextcolor);
+    opacity: 0;
+    border-radius: 30px;
+
+    transition: .2s;
+}
+.contextmenu_opener:hover ~ .contextmenu_box {
+    transform: scaleX(1);
+    transition-delay: 0s;
+}
+.contextmenu_opener:hover ~ .contextmenu_box .contextmenu {
+    opacity: 1;
+    transform: translate(0, -50%);
+}
+
+/* Buttons */
+.button {
+    padding: 0px 20px;
+    font-size: 18px;
+
+    text-align: center;
+    line-height: 50px;
+
+    background: var(--defcolor);
+    color: #fff;
+    border-radius: 30px;
+
+    transition: .4s;
+}
+.button.round {
+    padding: 0;
+    width: 60px;
+    height: 60px;
+    
+    text-align: center;
+    line-height: 60px;
+    
+    border-radius: 50%;
+    background: none;
+}
+.button:hover {
+    cursor: pointer;
+}
+
+/* Header */
+.header {
+    width: 100%;
+    height: 80px;
+    background: #fff;
+}
+/* > Logo */
+.logo path {
+    fill: var(--defcolor);
+    transition: .4s;
+}
+
+/* Panels */
+.left_panel {
+    top: 100px;
+}
+.left_panel .buttons_panel {
+    background: var(--defcolor);
+    border-radius: 30px;
+    box-shadow: var(--minishadow);
+    transition: .4s;
+}
+.left_panel .buttons_panel .button {
+    font-size: 18px;
+    color: #fff;
+    transition: .4s;
+}
+
+/* Main */
+.main {
+    top: 100px;
+    width: 82%;
+    margin: auto;
+}
+/* > Cards */
+.card_box {
+    margin: auto;
+}
+.card {
+    width: 180px;
+    height: 180px;
+    font-size: 18px;
+
+    color: var(--deftextcolor);
+
+    transition: .2s;
+}
+.card .color_canvas {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #4D9FFF;
+}
+.card .bottom_panel {
+    width: 100%;
+    padding: 14px 38px;
+    
+    text-align: center;
+
+    background: #ffffff00;
+    color: #fff;
+
+    transition: .3s;
+}
+/* > > Panel */
+.card .right_panel {
+    width: max-content;
+
+    left: 100%;
+    z-index: -1;
+}
+.card .right_panel .button {
+    width: 40px;
+    height: 40px;
+
+    /* left: -130%; */
+    transform: scale(0);
+    line-height: 40px;
+
+    background: #fff;
+    color: var(--grey);
+    border-radius: 20px;
+    box-shadow: var(--minishadow);
+
+    transition: .4s;
+}
+.card .right_panel .button.rect {
+    padding: 0 10px;
+    width: unset;
+}
+.card:hover {
+    box-shadow: var(--shadow);
+    z-index: 50;
+    cursor: pointer;
+}
+.card:hover .bottom_panel {
+    background: #fff;
+    color: var(--deftextcolor);
+}
+.card:hover .right_panel .button {
+    left: 0;
+    transform: scale(1);
+}
+
+.card:hover .right_panel .button.delay {
+    transition-delay: .1s;
+}
+.card:hover .right_panel .button.delay2 {
+    transition-delay: .2s;
+}
