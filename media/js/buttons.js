@@ -8,7 +8,7 @@ button.each(i=> {
 const inpulse = $(".button.pulse .inpulse");
 
 button.each(i=> {
-    button.eq(i).on("mousemove", e=> {
+    button.eq(i).on("mousemove", ()=> {
         const size = Math.max(button.eq(i).width(), button.eq(i).height()) + 40;
 
         inpulse.eq(i).css({

@@ -27,9 +27,9 @@
         </a>
     </header>
     <div class="left_panel content block pfixed margin left max">
-        <div class="buttons_panel content block margin bottom">
+        <div class="buttons_panel but_top content block margin bottom">
             <div class="content">
-                <a href="#" class="button round pulse contextmenu_opener">
+                <a href="#" class="button round pulse light contextmenu_opener">
                     <i class="far fa-clone"></i>
                 </a>
                 <div class="contextmenu_box">
@@ -37,7 +37,7 @@
                 </div>
             </div>
             <div class="content">
-                <a href="#" class="button round pulse contextmenu_opener">
+                <a href="#" class="button round pulse light contextmenu_opener">
                     <i class="fas fa-plus"></i>
                 </a>
                 <div class="contextmenu_box">
@@ -45,7 +45,7 @@
                 </div>
             </div>
             <div class="content">
-                <a href="#" class="button round pulse contextmenu_opener">
+                <a href="#" class="button round pulse light contextmenu_opener">
                     <i class="far fa-file"></i>
                 </a>
                 <div class="contextmenu_box">
@@ -53,7 +53,7 @@
                 </div>
             </div>
             <div class="content">
-                <a href="#" class="button round pulse contextmenu_opener">
+                <a href="#" class="button round pulse light contextmenu_opener">
                     <i class="far fa-bookmark"></i>
                 </a>
                 <div class="contextmenu_box">
@@ -63,17 +63,42 @@
         </div>
         <div class="buttons_panel content block margin bottom">
             <div class="content">
-                <a href="#" class="button round pulse contextmenu_opener">
+                <div style="z-index: 2;" class="button round pulse light contextmenu_opener filter_button">
                     <i class="fas fa-filter"></i>
-                </a>
+                </div>
                 <div class="contextmenu_box">
                     <div class="contextmenu">Add filter</div>
+                </div>
+                <div class="filter_panel">
+                    <div class="content block cldcenter">
+                        Filters:
+                    </div>
+
+                    <div class="margin ver content cldcenter">
+                        <div>Color: </div> 
+                        <div name="color_select" id="color_select" class="color_select select margin left min contextmenu_opener_in content">
+                            <div class="contextmenu_box">
+                                <div class="contextmenu content padding min">
+                                    <div class="color_checker margin right min" style="background: #ff3f3f;"></div>
+                                    <div class="color_checker margin right min" style="background: #3838f1;"></div>
+                                    <div class="color_checker margin right min" style="background: #47e647;"></div>
+                                    <div class="color_checker margin right min" style="background: #fdfd3e;"></div>
+                                    <div class="color_checker" style="background: #ff2cff;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="margin ver content cldcenter">
+                        <input type="checkbox" id="new_check" class="checkbox">
+                        <label for="new_check" class="checkbox_label">New: </label> 
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
     <main class="main content wrap">
-        <div class="card content block jus">
+        <div class="card content block jus c1">
             <div class="color_canvas"></div>
             <div class="right_panel content block padding min">
                 <div class="button round pulse margin bottom min" title="Add to favourites">
@@ -225,5 +250,6 @@
     </script>
     <script src="media/js/buttons.js"></script>
     <script src="media/js/card.js"></script>
+    <script src="media/js/filters.js"></script>
 </body>
 </html>

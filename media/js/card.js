@@ -1,5 +1,13 @@
 const card = $(".card");
 
+const colors = [
+    "#63a9f8",
+    "#68e67d",
+    "#ec646f",
+    "#ece364",
+    "#ec64af"
+];
+
 card.each(i=> {
     $(".card .color_canvas").eq(i).css({
         background: $(".card .bottom_panel .color").eq(i).text()
@@ -19,8 +27,8 @@ card.each(i=> {
             $(".card .action_button").text("copy");
         });
 
-        $("body").css({
-            "--defcolor": $(".card .bottom_panel .color").eq(i).text()
-        });
+        // $("body").css({
+        //     "--defcolor": $(".card .bottom_panel .color").eq(i).text()
+        // });
     });
 });
